@@ -80,3 +80,29 @@ function sendForm() {
     alert('Form submitted!');
 }
 
+function findBestOption(data) {
+    let bestOptionId = null;
+    let lowestPrice = Infinity;
+
+    for (const row of data) {
+      if ((row.rating === 4 || row.rating === 5) && row.price < lowestPrice) {
+        lowestPrice = row.price;
+        bestOptionId = row.id;
+      }
+    }
+
+    return bestOptionId;
+  }
+
+  const tableData = [
+    { id: 1, price: 10, rating: 4 },
+    { id: 2, price: 8, rating: 5 },
+    { id: 3, price: 12, rating: 3 },
+  ];
+
+  const findBestOptionButton = document.getElementById('findBestOptionButton');
+
+  findBestOptionButton.addEventListener('click', function() {
+    const bestOptionId = findBestOption(tableData);
+    console.log("Best option ID:", bestOptionId);
+  });
