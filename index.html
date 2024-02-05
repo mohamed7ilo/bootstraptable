@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Television Options</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="btn btn-primary" onclick="calculateAverage()">Calculate Average Price</button>
+<p id="averagePriceResult"></p>
+
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Icon or Image</th>
+                    <th>Name of the store</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Link</th>
+                    <th>Rating of the Place</th>
+                    <th>Inch</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row-1" class="table-success">
+                    <td>1</td>
+                    <td><a href="https://www.expertreviews.co.uk/samsung/1418276/samsung-qn900c-review" target="_blank"><img src="w_700,h_700,r_contain.avif" alt="TV 1" class="img-fluid"></a></td>
+                    <td>Mahsani hashmal</td>
+                    <td>מעלה כמון 2, מרכז ביג כרמיאל - קומה 2</td>
+                    <td>כרמיאל</td>
+                    <td><a href="https://www.payngo.co.il/309834.html?gad_source=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1Dx4GefckHKh9wllOePYp--ttEyeoNsVHO2o-Y7mmQyQwUXBA2MgahoC-g8QAvD_BwE" target="_blank">Mahsani hashmal</a></td>
+                    <td>4.9/5</td>
+                    <td>”85</td>
+                    <td>₪39,919</td>
+                    <td>
+                        <button class="btn red-btn" onclick="deleteRow(1)">Delete</button>
+                        <button class="btn blue-btn" onclick="openBuyPage(1)">Buy</button>
+                    </td>
+                </tr>
+                <tr id="row-2" class="table-success" >
+                    <td>2</td>
+                    <td><a href="https://www.rtings.com/tv/reviews/samsung/cu7000-cu7000d" target="_blank"><img src="Screenshot 2024-02-05 175259.png" alt="TV 2" class="img-fluid"></a></td>
+                    <td>ivory</td>
+                    <td>בן גוריון 13 אשקלון</td>
+                    <td>אשקלון</td>
+                    <td><a href="https://www.ivory.co.il/catalog.php?id=76358&gad_source=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1Co-SE-Ufa14c2H3YZktxBbxFpN_me4J1KbD5Cdq2d8lpjSRx2L13BoCG2kQAvD_BwE" target="_blank">Ivory</a></td>
+                    <td>3.2/5</td>
+                    <td>”50</td>
+                    <td>₪1490</td>
+                    <td>
+                        <button class="btn red-btn" onclick="deleteRow(2)">Delete</button>
+                        <button class="btn blue-btn" onclick="openBuyPage(2)">Buy</button>
+                    </td>
+                </tr>
+                <tr id="row-3" class="table-success">
+                    <td>3</td>
+                    <td><a href="https://www.rtings.com/tv/reviews/lg/qned90" target="_blank"><img src="Screenshot 2024-02-05 180031.png" alt="TV 3" class="img-fluid"></a></td>
+                    <td>KSP</td>
+                    <td>יוספטל 92 בת ים</td>
+                    <td>בת ים</td>
+                    <td><a href="https://ksp.co.il/web/item/279741" target="_blank">ksp</a></td>
+                    <td>4/5</td>
+                    <td>”65</td>
+                    <td>₪6,490</td>
+                    <td>
+                        <button class="btn red-btn" onclick="deleteRow(3)">Delete</button>
+                        <button class="btn blue-btn" onclick="openBuyPage(3)">Buy</button>
+                    </td>
+                </tr>
+                <tr id="row-4"  class="table-danger" >
+                    <td>4</td>
+                    <td><a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZF1TZwcte-S2OiUnJNKsHQ.png" target="_blank"><img src="Screenshot 2024-02-05 180950.png" alt="TV 4" class="img-fluid"></a></td>
+                    <td>CWC</td>
+                    <td>האורגים 2</td>
+                    <td>אשדוד</td>
+                    <td><a href="https://www.cwc.co.il/product/מסך-לד-40-led-fhd-40s3000-sonab-0/?gad_source=4&gclid=CjwKCAiAq4KuBhA6EiwArMAw1N3NbU6OQi79fY38I-GTN6IX5jrI5jFnoxVj9wanvdeqGlK7KdXIoxoCwHgQAvD_BwE" target="_blank">cwc</a></td>
+                    <td>1.5/5</td>
+                    <td>”40</td>
+                    <td>₪599</td>
+                    <td>
+                        <button class="btn red-btn" onclick="deleteRow(4)">Delete</button>
+                        <button class="btn blue-btn" onclick="openBuyPage(4)">Buy</button>
+                    </td>
+                </tr>
+                <tr id="row-5"  class="table-danger">
+                    <td>5</td>
+                    <td><a href="https://www.gadgety.co.il/252978/xiaomi-mi-tv-4s-review/" target="_blank"><img src="Screenshot 2024-02-05 181941.png" alt="TV 5" class="img-fluid"></a></td>
+                    <td>Electric-Center</td>
+                    <td>החורטים 1, חולון</td>
+                    <td>חולון</td>
+                    <td><a href="https://www.electric-center.co.il/product/טלוויזיה-חכמה-32”-xiaomi-שיאומי-דגם-mi-tv-l32m6-6aeu?aff=GoogleMerchant&aff_a=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1AnwQZAwXZNAtskdPyxaMW3M65wLtivtExQjgSJ8OAMea7q2eduoGRoChL0QAvD_BwE" target="_blank">Electric-Center</a></td>
+                    <td>1/5</td>
+                    <td>”32</td>
+                    <td>₪1,090</td>
+                    <td>
+                        <button class="btn red-btn" onclick="deleteRow(5)">Delete</button>
+                        <button class="btn blue-btn" onclick="openBuyPage(5)">Buy</button>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <div id="buypage1" class="container">
+        <form id="buyForm" style="display:none;">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="creditCard">Credit Card:</label>
+                <input type="text" class="form-control" id="creditCard" placeholder="Enter credit card number">
+            </div>
+            <button type="button" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
+</body>
+
+</html>
